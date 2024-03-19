@@ -1,13 +1,18 @@
 let { createApp } = Vue
 createApp({
-     data(){
-         return{
-
-         }
-     },
-     mounted(){
-         console.log('test');
-     }
+    data(){
+        return{
+          arrayEmail : [],
+        }
+    },
+    mounted(){
+        axios
+        .get('https://flynn.boolean.careers/exercises/api/random/mail')
+        .then((response)=>{
+            console.log(response);
+            console.log(response.data.response);//will give me a rnd email
+        })
+    }
 }).mount('#app')
 
 console.log('still works');

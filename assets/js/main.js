@@ -11,6 +11,7 @@ createApp({
         .then((response)=>{
             console.log(response);
             console.log(response.data.response);//will give me a rnd email
+            this.arrayEmail = response.data.response
         })
     }
 }).mount('#app')
